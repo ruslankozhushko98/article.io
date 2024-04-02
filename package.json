@@ -9,19 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^1.5.2",
+    "@nextui-org/react": "^2.2.10",
+    "@tanstack/react-query": "^5.28.9",
+    "@tanstack/react-query-devtools": "^5.28.10",
+    "dayjs": "^1.11.10",
+    "formik": "^2.4.5",
+    "framer-motion": "^11.0.24",
+    "next": "14.1.4",
+    "next-auth": "^4.24.7",
+    "next-nprogress-bar": "^2.3.11",
+    "nextui-date-picker": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.4"
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@prisma/client": "^5.11.0",
+    "@types/next-auth": "^3.15.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/yup": "^0.32.0",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-next": "14.1.4",
+    "eslint-plugin-brackets": "^0.1.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8",
+    "prisma": "^5.11.0",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "typescript": "^5"
   }
 }
