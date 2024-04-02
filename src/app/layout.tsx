@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 
+import { Provider } from './Provider';
+
 import './globals.css';
 
-const inter = Roboto({
+const roboto = Roboto({
   subsets: ['cyrillic', 'latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
 });
@@ -19,7 +21,11 @@ export default function RootLayout({
 }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <Provider>
+          {children}
+        </Provider>
+      </body>
     </html>
   );
 }
