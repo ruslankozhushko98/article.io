@@ -21,7 +21,7 @@ export default function RootLayout({
 }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={roboto.className} suppressHydrationWarning>
         <Provider>
           {children}
         </Provider>

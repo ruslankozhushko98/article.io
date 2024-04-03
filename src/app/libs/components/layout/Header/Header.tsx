@@ -1,14 +1,19 @@
 'use client';
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, Input } from '@nextui-org/react';
+import {
+  Link,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Input,
+} from '@nextui-org/react';
 
 import { icons } from '@/app/libs/utils/constants';
+import { UserDropdown } from './UserDropdown';
 
 export const Header: FC = () => {
-  const pathname = usePathname();
-
   return (
     <Navbar maxWidth="full" className="shadow-md py-2">
       <NavbarContent justify="start">
@@ -27,12 +32,8 @@ export const Header: FC = () => {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem className="h-full" isActive={pathname.includes('sign-up')}>
-          <Link className="h-full text-xl" href="/sign-up">Sign up</Link>
-        </NavbarItem>
-
-        <NavbarItem className="h-full" isActive={pathname.includes('sign-in')}>
-          <Link className="h-full text-xl" href="/sign-in">Sign in</Link>
+        <NavbarItem className="h-full flex items-center">
+          <UserDropdown />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
